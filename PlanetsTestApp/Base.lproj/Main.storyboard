@@ -1,24 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GXU-tW-8EZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Planets-->
+        <scene sceneID="SNJ-FS-cNA">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="EZj-Jh-Hym" customClass="PlanetListViewController" customModule="PlanetsTestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AOr-Va-11y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlanetCell" rowHeight="81" id="i13-sg-K2c" customClass="PlanetCell" customModule="PlanetsTestApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="81"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i13-sg-K2c" id="kQ0-C6-OwB">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1XY-q3-Vid">
+                                            <rect key="frame" x="10" y="5" width="355" height="71"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FLr-Vp-mJi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="355" height="35"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghj-M8-hEC">
+                                                            <rect key="frame" x="0.0" y="0.0" width="101" height="35"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsJ-Hj-Gvb">
+                                                            <rect key="frame" x="111" y="0.0" width="244" height="35"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="tDa-x4-8g0"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGa-Yt-ry5">
+                                                    <rect key="frame" x="0.0" y="35" width="355" height="36"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terrain :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cga-Fv-2Ph">
+                                                            <rect key="frame" x="0.0" y="0.0" width="53.5" height="36"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYU-Ps-b4V">
+                                                            <rect key="frame" x="53.5" y="0.0" width="301.5" height="36"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="FLr-Vp-mJi" secondAttribute="trailing" id="Je1-Ii-nDB"/>
+                                                <constraint firstItem="jGa-Yt-ry5" firstAttribute="top" secondItem="FLr-Vp-mJi" secondAttribute="bottom" id="PIJ-rv-2VF"/>
+                                                <constraint firstItem="FLr-Vp-mJi" firstAttribute="leading" secondItem="1XY-q3-Vid" secondAttribute="leading" id="U7s-bG-7np"/>
+                                                <constraint firstAttribute="bottom" secondItem="jGa-Yt-ry5" secondAttribute="bottom" id="XTL-x6-va3"/>
+                                                <constraint firstItem="jGa-Yt-ry5" firstAttribute="leading" secondItem="1XY-q3-Vid" secondAttribute="leading" id="b2M-Lc-Wda"/>
+                                                <constraint firstAttribute="trailing" secondItem="jGa-Yt-ry5" secondAttribute="trailing" id="eak-Jv-I6P"/>
+                                                <constraint firstItem="FLr-Vp-mJi" firstAttribute="top" secondItem="1XY-q3-Vid" secondAttribute="top" id="ujk-tS-eLd"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1XY-q3-Vid" firstAttribute="top" secondItem="kQ0-C6-OwB" secondAttribute="top" constant="5" id="1ow-VJ-Lqh"/>
+                                        <constraint firstAttribute="trailing" secondItem="1XY-q3-Vid" secondAttribute="trailing" constant="10" id="PKw-bC-EQr"/>
+                                        <constraint firstAttribute="bottom" secondItem="1XY-q3-Vid" secondAttribute="bottom" constant="4.5" id="YsD-Ez-MuS"/>
+                                        <constraint firstItem="1XY-q3-Vid" firstAttribute="leading" secondItem="kQ0-C6-OwB" secondAttribute="leading" constant="10" id="wxf-T4-1Aq"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="planetName" destination="NsJ-Hj-Gvb" id="oUy-ah-0Qk"/>
+                                    <outlet property="planetTerrain" destination="nYU-Ps-b4V" id="epr-2e-a0X"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LoadingCell" rowHeight="61" id="Bqy-WB-305" customClass="LoadingCell" customModule="PlanetsTestApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="109" width="375" height="61"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bqy-WB-305" id="VHO-Im-tEG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Zvg-KG-PN8">
+                                            <rect key="frame" x="177" y="20" width="20" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="Dim-tz-GPE"/>
+                                                <constraint firstAttribute="height" constant="20" id="W69-bv-5kp"/>
+                                            </constraints>
+                                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Zvg-KG-PN8" secondAttribute="bottom" constant="10" id="TNc-1E-gWr"/>
+                                        <constraint firstItem="Zvg-KG-PN8" firstAttribute="leading" secondItem="VHO-Im-tEG" secondAttribute="leadingMargin" constant="161" id="Xww-Qe-ETe"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Zvg-KG-PN8" secondAttribute="trailing" constant="162" id="kGN-BL-8QU"/>
+                                        <constraint firstItem="Zvg-KG-PN8" firstAttribute="top" secondItem="VHO-Im-tEG" secondAttribute="topMargin" constant="9" id="okd-Na-Jxg"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="Zvg-KG-PN8" id="YM1-m9-spq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EZj-Jh-Hym" id="qe0-xX-7Fp"/>
+                            <outlet property="delegate" destination="EZj-Jh-Hym" id="jbg-LZ-53g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Planets" id="beq-YA-0Vf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gw-z9-AvQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2663.1999999999998" y="-223.53823088455775"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DJs-DU-QAu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GXU-tW-8EZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GPy-86-3jI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EZj-Jh-Hym" kind="relationship" relationship="rootViewController" id="mLf-zQ-Ks2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BWF-tv-Gtd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1724" y="-223.53823088455775"/>
         </scene>
     </scenes>
 </document>
